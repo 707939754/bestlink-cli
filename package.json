@@ -1,6 +1,6 @@
 {
   "name": "bestlink-cli",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "bestlink-cli provide to frontent user",
   "main": "./lib/main.js",
