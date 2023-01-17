@@ -6,7 +6,6 @@ import prompt from "inquirer";
 
 const create = async (name: string, options?: any) => {
   const cwd = process.cwd();
-  console.log(cwd);
   const targetPath = path.join(cwd, name);
 
   const { projectName } = await prompt.prompt({

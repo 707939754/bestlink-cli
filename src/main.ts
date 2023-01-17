@@ -1,4 +1,4 @@
-import { getVersion, publish } from "./actions/version";
+import { getVersion } from "./actions/version";
 import { Command } from "commander";
 import chalk from "chalk";
 
@@ -6,14 +6,6 @@ const program = new Command();
 
 // 查看版本
 program.version(chalk.green(getVersion()), "-v, --version");
-
-// 发布版本 publish
-program
-  .command("publish <version>")
-  .description(`publish new version`)
-  .action((version: string) => {
-    publish(version);
-  });
 
 // 创建项目
 program
