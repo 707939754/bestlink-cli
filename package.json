@@ -1,0 +1,38 @@
+{
+  "name": "bestlink-cli",
+  "version": "1.0.1",
+  "license": "MIT",
+  "description": "bestlink-cli provide to frontent user",
+  "main": "./lib/main.js",
+  "scripts": {
+    "del": "rmdir /s/q lib",
+    "build": "tsc",
+    "link": "npm unlink bestlink && npm link",
+    "test": "yarn del && yarn build && yarn link"
+  },
+  "bin": {
+    "bestlink-cli": "./lib/bin/cli.js",
+    "bestlink": "./lib/bin/cli.js",
+    "best": "./lib/bin/cli.js",
+    "blc": "./lib/bin/cli.js"
+  },
+  "publishConfig": {
+    "registry": "http://192.168.0.60:8081/repository/npm-hosted/"
+  },
+  "keywords": [],
+  "author": "",
+  "devDependencies": {
+    "@types/fs-extra": "^9.0.13",
+    "@types/inquirer": "^9.0.3",
+    "@types/lodash": "^4.14.191",
+    "chalk": "4.0.0",
+    "commander": "^9.4.1",
+    "fs-extra": "^11.1.0",
+    "inquirer": "8.0.0",
+    "lodash": "^4.17.21",
+    "log-symbols": "^5.1.0",
+    "ora": "^6.1.2",
+    "shelljs": "^0.8.5",
+    "typescript": "*"
+  }
+}

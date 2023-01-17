@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "outDir": "./lib",
+    "baseUrl": "./src",
+    "strict": true,
+    "moduleResolution": "node",
+    "alwaysStrict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "removeComments": true, // 删除注释
+    "resolveJsonModule": true
+  },
+  "include": ["./src"],
+  "exclude": ["node_modules", "dist", "lib", "**/*.test.ts"]
+}
