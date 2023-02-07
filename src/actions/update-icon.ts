@@ -209,7 +209,7 @@ export default class UpdateIcon {
   async openBrowser() {
     try {
       this.browser = await puppeteer.launch({
-        headless: false,
+        headless: true,
         timeout: this.timeout,
         defaultViewport: {
           width: 1920,
@@ -256,6 +256,11 @@ export default class UpdateIcon {
         visible: true,
       });
       // 可能这里影响到浏览器无头模式
+      const CDPSession = await iconPage.target().createCDPSession();
+      await CDPSession.send("Page.setDownloadBehavior", {
+        behavior: "allow", //允许下载请求
+        downloadPath: path.join(this.originDownload),
+      });
       await iconPage.$eval(".btn-group-item", (ele: any) => {
         ele.click();
       });
