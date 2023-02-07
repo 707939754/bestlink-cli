@@ -34,5 +34,9 @@
     "ora": "^6.1.2",
     "shelljs": "^0.8.5",
     "typescript": "*"
+  },
+  "dependencies": {
+    "compressing": "^1.7.0",
+    "puppeteer": "^19.6.3"
   }
 }
